@@ -5,7 +5,7 @@ export default {
   method: 'get',
   baseURL: undefined,
   timeout: undefined,
-  timeoutErrorMessage: '请求超时！',
+  timeoutErrorMessage: 'Request Timeout',
   paramsSerializer(params) {
     return qs.stringify(params, { arrayFormat: 'comma' });
   },
