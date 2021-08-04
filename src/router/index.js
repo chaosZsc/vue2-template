@@ -5,7 +5,7 @@ import 'nprogress/nprogress.css';
 
 Vue.use(VueRouter);
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'Home',
@@ -24,6 +24,19 @@ const routes = [
     meta: {
       title: '关于',
     },
+  },
+  {
+    path: '/error/404',
+    name: 'Page404',
+    component: () => import(/* webpackChunkName: "page404" */ '../views/Error/Page404'),
+    meta: {
+      title: '404',
+    },
+  },
+  // 重定向 404 需放到路由列表最后
+  {
+    path: '*',
+    redirect: '/error/404',
   },
 ];
 
