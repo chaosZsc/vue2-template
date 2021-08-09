@@ -45,7 +45,7 @@
     "webpack-bundle-analyzer": "^4.4.2"
   },
   "lint-staged": {
-    "*.{js,vue,json}": [
+    "*.{js,vue}": [
       "yarn lint"
     ]
   }
